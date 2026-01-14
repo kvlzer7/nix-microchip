@@ -14,7 +14,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchurl {
     url =
       "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v${version}-linux-installer.tar";
-    hash = "sha256-ed015d1f0c79c2769b5844d5f923b838d277d281858a1f0123b02901f9c991ad";
+    hash = "sha256-7QFdHwx5wnabWETV+SO4ONJ30oGFih8BI7ApAfnJka0=";
     # The Microchip server requires this Referer to allow the download.
     curlOptsList = [
       "--referer"
