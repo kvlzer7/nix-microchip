@@ -11,11 +11,11 @@ let
 in stdenvNoCC.mkDerivation rec {
   # See https://www.microchip.com/en-us/tools-resources/archives/mplab-ecosystem for microchip installer back-catalogue
   # pname = "microchip-xc16-unwrapped";
-  pname = "xc16";
+  pname = "xc8";
   inherit version;
   src = fetchurl {
     url =
-      "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc16-v${version}-full-install-linux64-installer.run";
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v${version}-full-install-linux-x64-installer.run";
     # N.B. Nix uses a 32-bit hash encoding. Use 'nix hash path <filename>' to generate
     inherit hash;
     # v1.61
@@ -63,9 +63,9 @@ in stdenvNoCC.mkDerivation rec {
     homepage =
       "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers";
     description =
-      "Microchip's MPLAB XC16 C compiler toolchain for all 16-bit PIC microcontrollers (MCUs)";
+      "Microchip's MPLAB XC8 C compiler toolchain for all 16-bit PIC microcontrollers (MCUs)";
     license = licenses.unfree;
-    maintainers = with maintainers; [ remexre nyadiia ];
+    maintainers = with maintainers; [ Fuwn remexre nyadiia ];
     platforms = [ "x86_64-linux" ];
   };
 }

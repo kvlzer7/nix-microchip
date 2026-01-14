@@ -9,12 +9,12 @@ let
 in
 stdenvNoCC.mkDerivation rec {
   pname = "mplab-x-unwrapped";
-  version = "6.15";
+  version = "6.25";
 
   src = fetchurl {
     url =
       "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v${version}-linux-installer.tar";
-    hash = "sha256-ZiiijuCC4cOfJ5MdMDZ+LyUAzqIJDLTN93nKoZtpTGE=";
+    hash = "sha256-ed015d1f0c79c2769b5844d5f923b838d277d281858a1f0123b02901f9c991ad";
     # The Microchip server requires this Referer to allow the download.
     curlOptsList = [
       "--referer"
